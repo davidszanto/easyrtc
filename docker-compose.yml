@@ -1,7 +1,4 @@
 easyrtc:
   build: ./
-  command: tail -f /var/log/lastlog
   ports:
-    - "47121:8080"
-  volumes:
-    - .:/src
+    - "47121:47121"
