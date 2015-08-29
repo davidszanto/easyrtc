@@ -114,15 +114,15 @@ function setThumbSizeButton(percentSize, percentLeft, percentTop, parentw, paren
 var sharedVideoWidth  = 1;
 var sharedVideoHeight = 1;
 
-var firstLeft = 100;
-var firstTop = 20;
-var width = 535;
-var height = 400;
+var firstLeft = 5;
+var firstTop = 2;
+var width = 30;
+var height = 40;
 
 function reshape1of2(parentw, parenth) {
         return {
-            left: firstLeft,
-            top: firstTop,
+            left: firstLeft ,
+            top: firstTop ,
             width: width,
             height: height
         }
@@ -510,18 +510,18 @@ function handleWindowResize() {
 
     function applyReshape(obj,  parentw, parenth) {
         var myReshape = obj.reshapeMe(parentw, parenth);
-
+        var index = (myReshape.width < 100 && myReshape.height < 100) ? "%" : "px";
         if(typeof myReshape.left !== 'undefined' ) {
-            obj.style.left = Math.round(myReshape.left) + "px";
+            obj.style.left = Math.round(myReshape.left) + index;
         }
         if(typeof myReshape.top !== 'undefined' ) {
-            obj.style.top = Math.round(myReshape.top) + "px";
+            obj.style.top = Math.round(myReshape.top) + index;
         }
         if(typeof myReshape.width !== 'undefined' ) {
-            obj.style.width = Math.round(myReshape.width) + "px";
+            obj.style.width = Math.round(myReshape.width) + index;
         }
         if(typeof myReshape.height !== 'undefined' ) {
-            obj.style.height = Math.round(myReshape.height) + "px";
+            obj.style.height = Math.round(myReshape.height) + index;
         }
 
         var n = obj.childNodes.length;
