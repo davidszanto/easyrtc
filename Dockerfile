@@ -3,9 +3,9 @@ FROM unknownhero/ubuntu-node-n
 RUN n latest
 
 # Bundle app source
-COPY ./server_example/package.json /src/server_example/package.json
+COPY ./app/package.json /src/app/package.json
 
-WORKDIR /src/server_example
+WORKDIR /src/app
 
 RUN npm install --no-bin-links
 
