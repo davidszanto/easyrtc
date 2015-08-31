@@ -682,9 +682,9 @@ function changeMic(){
 
 function micColor(){
     if(activeMicState){
-        document.getElementById("micButton").style['background-color'] = "red";
+        document.getElementById("micButton").src = "/images/microphone-red.png";
     }else{
-        document.getElementById("micButton").style['background-color'] = "lightgray";
+        document.getElementById("micButton").src = "/images/microphone-grey.png";
     }
 }
 
@@ -784,7 +784,7 @@ function appInit() {
     handleWindowResize(); //initial call of the top-down layout manager
 
     easyrtc.setRoomOccupantListener(callEverybodyElse);
-    easyrtc.easyApp("easyrtc.multiparty", "box0", ["box1", "box2", "box3","box4", "box5"], loginSuccess);
+    easyrtc.easyApp("e+asyrtc.multiparty", "box0", ["box1", "box2", "box3","box4", "box5"], loginSuccess);
     easyrtc.setPeerListener(messageListener);
     easyrtc.setDisconnectListener( function() {
         easyrtc.showError("LOST-CONNECTION", "Lost connection to signaling server");

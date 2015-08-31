@@ -13,3 +13,6 @@ COPY . /src
 
 EXPOSE 47121
 
+CMD ["node","server.js"]
+
+
