@@ -21,7 +21,7 @@
 
 .thumbCommon {
     z-index:2;
-    box-shadow: 5px 5px 5px #000000;
+    /*box-shadow: 5px 5px 5px #000000;*/
 }
 
 #controlArea {
@@ -72,3 +72,5 @@ body {
 #textentryCancel {
     font-size:larger;
 }
+
+
