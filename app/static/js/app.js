@@ -114,15 +114,15 @@ function setThumbSizeButton(percentSize, percentLeft, percentTop, parentw, paren
 var sharedVideoWidth  = 1;
 var sharedVideoHeight = 1;
 
-var firstLeft = 5;
-var firstTop = 2;
-var width = 30;
-var height = 40;
+var firstLeft = 100;
+var firstTop = 20;
+var width = 535;
+var height = 400;
 
 function reshape1of2(parentw, parenth) {
         return {
-            left: firstLeft ,
-            top: firstTop ,
+            left: firstLeft,
+            top: firstTop,
             width: width,
             height: height
         }
@@ -510,18 +510,18 @@ function handleWindowResize() {
 
     function applyReshape(obj,  parentw, parenth) {
         var myReshape = obj.reshapeMe(parentw, parenth);
-        var index = (myReshape.width < 100 && myReshape.height < 100) ? "%" : "px";
+
         if(typeof myReshape.left !== 'undefined' ) {
-            obj.style.left = Math.round(myReshape.left) + index;
+            obj.style.left = Math.round(myReshape.left) + "px";
         }
         if(typeof myReshape.top !== 'undefined' ) {
-            obj.style.top = Math.round(myReshape.top) + index;
+            obj.style.top = Math.round(myReshape.top) + "px";
         }
         if(typeof myReshape.width !== 'undefined' ) {
-            obj.style.width = Math.round(myReshape.width) + index;
+            obj.style.width = Math.round(myReshape.width) + "px";
         }
         if(typeof myReshape.height !== 'undefined' ) {
-            obj.style.height = Math.round(myReshape.height) + index;
+            obj.style.height = Math.round(myReshape.height) + "px";
         }
 
         var n = obj.childNodes.length;
@@ -784,7 +784,7 @@ function appInit() {
     handleWindowResize(); //initial call of the top-down layout manager
 
     easyrtc.setRoomOccupantListener(callEverybodyElse);
-    easyrtc.easyApp("e+asyrtc.multiparty", "box0", ["box1", "box2", "box3","box4", "box5"], loginSuccess);
+    easyrtc.easyApp("easyrtc.multiparty", "box0", ["box1", "box2", "box3","box4", "box5"], loginSuccess);
     easyrtc.setPeerListener(messageListener);
     easyrtc.setDisconnectListener( function() {
         easyrtc.showError("LOST-CONNECTION", "Lost connection to signaling server");

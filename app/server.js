@@ -17,8 +17,10 @@ var socketServer = io.listen(webServer, {"log level":1});
 // Start EasyRTC server
 var rtc = easyrtc.listen(httpApp, socketServer);
 
-var myIceServers = [{url:'stun:stun01.sipphone.com'},
-    {url:'stun:novisse.ru:3478'}];
+var myIceServers = [
+    {url:'stun:stun01.sipphone.com'},
+    {url:'stun:novisse.ru:3478'}
+];
 
 easyrtc.setOption("appIceServers", myIceServers);
 
