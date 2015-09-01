@@ -682,9 +682,9 @@ function changeMic(){
 
 function micColor(){
     if(activeMicState){
-        document.getElementById("micButton").style['background-color'] = "red";
+        document.getElementById("micButton").src = "/images/microphone-red.png";
     }else{
-        document.getElementById("micButton").style['background-color'] = "lightgray";
+        document.getElementById("micButton").src = "/images/microphone-grey.png";
     }
 }
 
