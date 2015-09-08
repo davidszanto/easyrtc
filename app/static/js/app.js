@@ -116,7 +116,7 @@ var sharedVideoHeight = 1;
 
 var firstLeft = 5;
 var firstTop = 2;
-var width = 33;
+var width = 30;
 var height = 45;
 
 function reshape1of2(parentw, parenth) {
